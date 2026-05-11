@@ -1,0 +1,23 @@
+class Word:
+    def __init__(self, a):
+         self.a = a
+
+    def __eq__(self, other):
+         # Directly compare stored strings
+         return self.a == other.a
+
+    def __add__(self, other):
+         # Return a new Word object with concatenated strings
+         return Word(self.a + other.a)
+
+    def __str__(self):
+         # Nicely display the stored string
+         return self.a
+a = input("ENTER A STRING: ")
+b = input("ENTER A STRING: ")
+w = Word(a)
+w1 = Word(b)
+# # Equality check
+print(w == w1)
+# # Concatenation
+print(w + w1)
